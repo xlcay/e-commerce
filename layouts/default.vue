@@ -49,10 +49,10 @@ const {
     <div class="relative flex items-center">
       <a href="#" @click.prevent="toggleCart" class="flex items-center">
         <img src="/images/icon-cart.svg" alt="Cart Icon" />
-        <div v-if="cartCount > 0 && cartCount <= 10" class="absolute -top-3 -right-3 bg-orange text-white text-xs w-5 h-5 mobile-md:text-base flex items-center justify-center rounded-full">
+        <div v-if="cartCount > 0 && cartCount <= 10" class="absolute -top-3 -right-3 bg-orange text-white  text-sm w-5 h-5 mobile-md:text-base flex items-center justify-center rounded-full">
         {{ cartCount }}
       </div>
-      <div v-else-if="cartCount > 10" class="absolute -top-3 -right-3 bg-orange text-white text-xs w-6 h-5 flex items-center justify-center rounded-full">
+      <div v-else-if="cartCount > 10" class="absolute -top-3 -right-3 bg-orange text-white mobile-md:text-base text-sm w-6 h-5 flex items-center justify-center rounded-full">
         10+
       </div>
       </a>
