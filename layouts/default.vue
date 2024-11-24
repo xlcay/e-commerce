@@ -45,11 +45,11 @@ const {
   
         <!-- Cart Section -->
          
-  <div class="flex items-center justify-center pt-5 mr-8 md:mr-5 space-x-10 md:space-x-5">
+  <div class="flex items-center justify-center pt-5 mr-12 md:mr-5 mobile-md:m-5 space-x-10 md:space-x-5">
     <div class="relative flex items-center">
       <a href="#" @click.prevent="toggleCart" class="flex items-center">
         <img src="/images/icon-cart.svg" alt="Cart Icon" />
-        <div v-if="cartCount > 0 && cartCount <= 10" class="absolute -top-3 -right-3 bg-orange text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
+        <div v-if="cartCount > 0 && cartCount <= 10" class="absolute -top-3 -right-3 bg-orange text-white text-xs w-5 h-5 mobile-md:text-base flex items-center justify-center rounded-full">
         {{ cartCount }}
       </div>
       <div v-else-if="cartCount > 10" class="absolute -top-3 -right-3 bg-orange text-white text-xs w-6 h-5 flex items-center justify-center rounded-full">
@@ -58,7 +58,7 @@ const {
       </a>
 
       <!-- Cart Dropdown -->
-      <div v-if="isCartOpen" class="absolute top-10 right-0 w-80 h-52 p-6 bg-white shadow-2xl rounded-lg z-10">
+      <div v-if="isCartOpen" class="absolute top-10 right-1 w-80 mobile-md:w-auto p-6 bg-white shadow-2xl rounded-lg z-10">
         <div v-if="cartCount === 0">
           <h1 class="text-lg font-black text-black border-b border-gray-300 pl-3 pb-4">Cart</h1>
           <p class="flex text-base m-10 justify-center font-normal">Your cart is empty.</p>
